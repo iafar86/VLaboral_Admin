@@ -270,6 +270,7 @@
     <Content Include="assets\css\style-switcher.css" />
     <Content Include="assets\css\theme.css" />
     <Content Include="assets\img\cp.png" />
+    <Content Include="assets\img\employeeProfile.jpg" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\metis-tile.png" />
     <Content Include="assets\img\pattern\always_grey.png" />
@@ -297,6 +298,7 @@
     <Content Include="assets\img\pattern\white_tiles.png" />
     <Content Include="assets\img\pattern\wood_1.png" />
     <Content Include="assets\img\user.gif" />
+    <Content Include="assets\img\usrIcon.png" />
     <Content Include="assets\js\app.js" />
     <Content Include="assets\js\app.min.js" />
     <Content Include="assets\js\core.js" />
