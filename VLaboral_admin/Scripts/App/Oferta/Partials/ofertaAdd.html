@@ -48,11 +48,11 @@
                             </a>
                         </script>-->
 
-                        <div class='container-fluid' ng-controller="TypeaheadCtrl">
+                        <!--<div class='container-fluid'>
 
                             <label>Lugar</label>
                             <input type="text" ng-model="Oferta.lugar" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
-                        </div>
+                        </div>-->
                     </div>
                 </div>
 
@@ -62,23 +62,23 @@
 
                 <div class="col-md-6">
                     <label>Fecha de Inicio de Oferta</label>
-                    <p class="input-group">
+                    <!--<p class="input-group">
                         <input type="text" ng-model="Oferta.fechaDeInicio" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                         </span>
-                    </p>
+                    </p>-->
                 </div>
 
 
                 <div class="col-md-6">
-                    <label>Fecha de Fin de la Oferta</label>
+                    <!--<label>Fecha de Fin de la Oferta</label>
                     <p class="input-group">
                         <input type="text" ng-model="Oferta.fechaDeFin" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
                         <span class="input-group-btn">
                             <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
                         </span>
-                    </p>
+                    </p>-->
                 </div>
             </div>
 
@@ -98,12 +98,19 @@
                 <div collapse="isCollapsed">
                 </div>
             </div>-->
-            <accordion>
-                <accordion-group>
-                    <accordion-heading>
-                        nuevo puesto<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open,'glyphicon-chevron-right': !status.open}"></i>
-                    </accordion-heading>
-
+            <div class="row">
+                acordion
+                <accordion>
+                    <accordion-group>
+                        <accordion-heading>
+                            nuevo puesto<i class="pull-right glyphicon"></i>
+                        </accordion-heading>
+                        Todo lo que deberia ir adentro
+                    </accordion-group>
+                </accordion>
+                fin acordion
+            </div>
+            
                     <div class="col-xs-12">
 
 
@@ -116,7 +123,7 @@
                         <div class="col-xs-4">
                             <div class="form-inline">
                                 <label>
-                                    <input type="text" ng-model="Orferta.tipoDeContratacion" class="form-control ng-pristine ng-untouched" placeholder="Contrato de locacion, contrato de trabajo..." />
+                                    <input type="text" ng-model="Oferta.tipoDeContratacion" class="form-control ng-pristine ng-untouched" placeholder="Contrato de locacion, contrato de trabajo..." />
                                 </label>
                             </div>
                         </div>
@@ -151,7 +158,7 @@
                         <div class="col-xs-5">
                             <div class="form-group">
 
-                                <button ng-click="addpuesto" class="btn btn-primary btn-xs">agregar</button>
+                                <button  class="btn btn-primary btn-xs">agregar</button>
 
 
                                 <!--repeat start-->
@@ -162,7 +169,7 @@
                                     </button>
                                 </div>-->
                                 <!--repeat habilidades-->
-                                <div class="list-items animate-show-item" ng-show="category.expanded">
+                                <div class="list-items animate-show-item">
                                     <ul>
                                         <!-- ngrepeat: task in habilidades.task -->
                                     </ul>
@@ -209,7 +216,7 @@
                         <div class="col-xs-3">
                             <div class="form-horizontal">
                                 <div class="checkbox">
-                                    <label>finalizado?    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" ng-model="puesto.niveldeestudiofinalizado">
+                                    <label>finalizado?    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox">
 
                                 </div>
                             </div>
@@ -245,7 +252,7 @@
                         <div class="col-xs-4">
                             <div class="form-inline">
                                 <label>experiencia</label>
-                                <input type="text" ng-model="oferta.añosdeexperiencia" class="form-control" placeholder="experiencia(meses/años)..." />
+                                <input type="text"  class="form-control" placeholder="experiencia(meses/años)..." />
                             </div>
                         </div>
                         <br />
@@ -293,9 +300,9 @@
 
                     <br>
                     <br>
-                </accordion-group>
+               
 
-            </accordion>
+           
 
         </div>
     </div>

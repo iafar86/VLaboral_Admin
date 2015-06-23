@@ -16,46 +16,80 @@
                 </div>
             </header>
             <div class="body">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <!--<div class="col-lg-3">
-                            <label class="control-label col-lg-3">CUE</label>
-                            <div class="input-group col-lg-8">
-                                <input ng-model="escuela.CUE" class="form-control" type="text" data-mask="999999999" required>
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <label class="control-label col-lg-2">Nombre</label>
-                            <div class="input-group col-lg-10">
-                                <input ng-model="escuela.Nombre" class="form-control" type="text" required>
-                            </div>
+                <div class="row">
+                  
+                <div class="col-xs-3">
+                    <!-- SIDEBAR USERPIC -->
+                    <div class="profile-userpic">
+                        <img src="../../../../Content/companyLogo.png" class="img-responsive" alt="">
+                    </div>
+                    <!-- END SIDEBAR USERPIC -->
+                    <!-- SIDEBAR USER TITLE -->
+                    <div class="profile-usertitle">
+                        <!--<div class="profile-usertitle-name">
+                            {{infoEmpleador.Rsocial}}
                         </div>-->
-                        <label>CUIT</label>
-                        <input type="number" ng-model="infoEmpresa.Cuit" name="cuit" class="form-control" required />
+                        <div class="profile-usertitle-job">
+                            Developer
+                        </div>
+                    </div>
+                    <!-- END SIDEBAR USER TITLE -->
+                    <!-- SIDEBAR BUTTONS -->
+                    <div class="profile-userbuttons">
+                        <button type="button" class="btn btn-success btn-sm">Editar</button>
+                        <button type="button" class="btn btn-danger btn-sm">Cancelar</button>
+                    </div>
+                    <!-- END SIDEBAR BUTTONS -->
+                    <!-- SIDEBAR MENU -->
+                    <div class="profile-usermenu">
+                        <ul class="nav">
+                            <li class="active">
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-home"></i>
+                                    Informacion
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                   Configuracion Cuenta
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" target="_blank">
+                                    <i class="glyphicon glyphicon-ok"></i>
+                                    Tareas
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-flag"></i>
+                                    Ayuda
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- END MENU -->
+                </div> <!--Imagen Profile/SideMenu-->
 
-                        <label>Nombre/Razon Social</label>
-                        <input type="text" ng-model="infoEmpresa.Rsocial" name="nombre/razonSocial" class="form-control" required />
-                    </div>
-                    <div class="form-group">
-                        <div class="col-lg-7">
-                            <label class="control-label col-lg-2">Direccion</label>
-                            <div class="col-lg-10">
-                                <div class="input-group col-lg-12">
-                                    <input ng-model="infoEmpresa.Dir" class="form-control" type="text">
-                                </div>
-                            </div>
-                        </div>                        
-                        <div class="col-lg-4">
-                            <label class="control-label col-lg-2">Telefono</label>
-                            <div class="col-lg-10">
-                                <div class="input-group col-lg-12">
-                                    <input ng-model="infoEmpresa.Tel" class="form-control" type="text">
-                                </div>
-                            </div>
-                        </div>                
-                    </div>
-                    <div class="form-group">
-                        <div>
+                <div class="col-xs-9">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label>CUIT</label>
+                            <input type="number" ng-model="infoEmpresa.Cuit" name="cuit" class="form-control" required />
+                        </div>
+                    </div> <!--CUIT-->
+
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <label>Nombre/Razon Social</label>
+                            <input type="text" ng-model="infoEmpresa.Rsocial" name="nombre/razonSocial" class="form-control" required />
+                        </div>
+                    </div>  <!--Nombre/RazonSocial-->
+
+                    <br />
+                    <div class="row">
+                        <div class="col-xs-3">
                             <label>Pais</label>
                             <div class="btn-group" dropdown is-open="status.isopen">
                                 <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
@@ -69,8 +103,8 @@
                                     <li><a href="#">Separated link</a></li>
                                 </ul>
                             </div>
-                        </div>
-                        <div>
+                        </div> <!--Pais-->
+                        <div class="col-xs-3">
                             <label>Localidad</label>
                             <div class="btn-group" dropdown is-open="status.isopen">
                                 <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
@@ -83,84 +117,97 @@
                                     <li class="divider"></li>
                                     <li><a href="#">Separated link</a></li>
                                 </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-lg-7">
-                            <label class="control-label col-lg-2">Email</label>
-                            <div class="col-lg-10">
-                                <div class="input-group col-lg-12">
-                                    <input ng-model="infoEmpresa.Mail" class="form-control" type="text" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5"></div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <div>
-                                <label>Rubro</label>
-                                <div class="btn-group" dropdown is-open="status.isopen">
-                                    <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
-                                        Seleccione <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <label>Sub-Rubro</label>
-                                <div class="btn-group" dropdown is-open="status.isopen">
-                                    <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
-                                        Seleccione <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
+                            </div> <!--Localidad-->
+                        </div> <!--Localidad-->
+                    </div> <!--Ubicacion-->
+                    <br />
 
-                                <pre>{{singleModel}}</pre>
-                                <button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-                                    +
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                     <div class="row">
-                        <div class="col-md-3 col-md-6"><div class="form-group"> <a href="#">Terminos y Condiciones</a> </div>  </div>
-                        <div class="col-md-3 col-md-6">
-                            <div class="form-group">
-                                <div>
+                        <div class="col-xs-7">
+                            <label>Direccion</label>
+                            <input ng-model="infoEmpresa.Dir" class="form-control" type="text">
+                        </div> <!--Direccion-->
+                        <div class="col-lg-3">
+                            <label>Telefono</label>
+                            <input ng-model="infoEmpresa.Tel" class="form-control" type="text">
+                        </div> <!--Telefono-->
+                    </div> <!--Direccion/Telefono-->
 
-                                    <pre>{{singleModel}}</pre>
-                                    <button type="button" class="btn btn-primary" ng-model="singleModel" btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
-                                        Aceptar y Continuar
-                                    </button>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <label>Email</label>
+                            <input ng-model="infoEmpresa.Mail" class="form-control" type="text">
+                        </div><!--Email-->
+                        <div class="col-lg-5">
+                            <label>Pagina Web</label>
+                            <input ng-model="infoEmpresa.Web" class="form-control" type="text">
+                        </div><!--Web-->
+                    </div> <!--EMail/PaginaWeb-->
+
+                    <br />
+
+                    <div class="row">
+                        <div class="col-xs-10">
+                            <accordion>
+                                <accordion-group>
+                                    <accordion-heading>
+                                        Rubro/SubRubro <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+                                    </accordion-heading>
+                                    <div class="row">
+                                        <div class="col-xs-2">
+                                            <label>Rubro</label>
+                                            <div class="btn-group" dropdown is-open="status.isopen">
+                                                <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                                                    Seleccione <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div> <!--Rubro-->
+                                        <div class="col-xs-4">
+                                            <label>Sub-Rubro</label>
+                                            <div class="btn-group" dropdown is-open="status.isopen">
+                                                <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+                                                    Seleccione <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" role="menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div><!--SubRubro-->
+                                        <div class="col-xs-3">
+                                            <button class="btn btn-success">Agregar</button>
+                                        </div> <!--Boton agregar Nuevo Rubro/Sub-->
+                                    </div>
+                                    <br />
+                                    <div class="row text-center">
+                                        Listado de Rubro/Subrubro
+                                    </div>  <!--Lista de Rubro/Subrubro-->
+                                </accordion-group>
+                            </accordion>
                         </div>
-                    </div>
-</form>
-                <div class="modal-footer">
+                    </div><!--Rubro/SubRubro-->
+
+                </div><!--Datos basicos empleador-->
+
+                </div> <!--Imagen Perfil/Datos Empleador--> 
+
+                <br />
+
+
+                <!--<div class="modal-footer">
                     <button class="btn btn-primary" ng-click="empleadorAdd(infoEmpresa)">Guardar</button>
                     <button class="btn btn-warning" ng-click="cancelEmpleadorAdd()">Cancelar</button>
-                </div>
+                </div>--> <!--Footer-->
             </div>
         </div>
     </div>
