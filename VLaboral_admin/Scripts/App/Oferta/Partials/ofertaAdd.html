@@ -24,7 +24,7 @@
 
             <div class="form-group">
                 <label>Nombre de la Oferta</label>
-                <input type="text" ng-model="Oferta.nombre" class="form-control" required />
+                <input type="text" ng-model="" class="form-control" required />
             </div>
             <div class="form-inline">
                 <div class="form-group">
@@ -48,10 +48,10 @@
                             </a>
                         </script>-->
 
-                        <div class='container-fluid' ng-controller="TypeaheadCtrl">
+                        <div class='container-fluid'    >
 
                             <label>Lugar</label>
-                            <input type="text" ng-model="Oferta.lugar" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control">
+                            <input type="text" ng-model=""  class="form-control">
                         </div>
                     </div>
                 </div>
@@ -63,9 +63,9 @@
                 <div class="col-md-6">
                     <label>Fecha de Inicio de Oferta</label>
                     <p class="input-group">
-                        <input type="text" ng-model="Oferta.fechaDeInicio" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                        <input type="date" ng-model="" class="form-control" datepicker-popup="{{format}}" ng-model="" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            <button type="button" class="btn btn-default" ><i class="glyphicon glyphicon-calendar"></i></button>
                         </span>
                     </p>
                 </div>
@@ -74,9 +74,9 @@
                 <div class="col-md-6">
                     <label>Fecha de Fin de la Oferta</label>
                     <p class="input-group">
-                        <input type="text" ng-model="Oferta.fechaDeFin" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                        <input type="date" ng-model="" class="form-control" datepicker-popup="" ng-model="" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            <button type="button" class="btn btn-default" ><i class="glyphicon glyphicon-calendar"></i></button>
                         </span>
                     </p>
                 </div>
@@ -85,117 +85,134 @@
             <div class="form-group">
 
                 <label>Descripcion</label>
-                <textarea cols="25" rows="6" ng-model="Oferta.descripcion" class="form-control" required> </textarea>
+                <textarea cols="25" rows="6" ng-model="" class="form-control" required> </textarea>
             </div>
         </div>
 
 
         <div class="col-xs-10 col-xs-offset-1">
 
-            <!--<div ng-controller="CollapseDemoCtrl" class="ng-scope">
-                <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Agregar nuevo puesto</button>
-                <hr>
-                <div collapse="isCollapsed">
-                </div>
-            </div>-->
             <accordion>
-                <accordion-group>
-                    <accordion-heading>
-                        nuevo puesto<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open,'glyphicon-chevron-right': !status.open}"></i>
-                    </accordion-heading>
-
+                <accordion-group heading="Nuevo Puesto">
                     <div class="col-xs-12">
 
 
-                        <div class="col-xs-6">
-                            <div class="form-inline">
-                                <label>Puesto</label>
-                                <input type="text" ng-model="puesto.nombre" class="form-control ng-pristine ng-untouched ng-valid" placeholder="nombre del puesto">
-                            </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <div class="form-inline">
-                                <label>
-                                    <input type="text" ng-model="Orferta.tipoDeContratacion" class="form-control ng-pristine ng-untouched" placeholder="Contrato de locacion, contrato de trabajo..." />
-                                </label>
-                            </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <div class="form-group">
-                                <label>sub-rubro del puesto</label>
-                                <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle="" ng-disabled="disabled">
-                                    sub-rubro <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">action</a></li>
-                                    <li><a href="#">another action</a></li>
-                                    <li><a href="#">something else here</a></li>
-                                </ul>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-inline">
+                                    <label>Puesto</label>
+                                    <input type="text" ng-model="" class="form-control ng-pristine ng-valid ng-touched" placeholder="Nombre del puesto...">
+                                </div>
                             </div>
 
-                        </div>
 
-
-
-                        <br>
-
-
-                        <div class="col-xs-6">
-                            <div class="form-inline">
-
-
-                                <label>agregar habilidades requeridas</label>
-                                <input type="text" ng-model="puesto.habilidad" class="form-control ng-valid ng-dirty ng-pristine ng-untouched" placeholder="habilidad requerida">
-                            </div>
-                        </div>
-                        <div class="col-xs-5">
-                            <div class="form-group">
-
-                                <button ng-click="addpuesto" class="btn btn-primary btn-xs">agregar</button>
-
-
-                                <!--repeat start-->
-                                <!--<div ng-repeat-start="habilidad in habilidades" class="ng-hide-animate">
-                                    <button class="btn btn-primary btn-block btn-sm" ng-click="toogglepuesto(puesto)">
-                                        {{puesto.nombre}}
-                                        <span class="expand-indicator" ng-show="puesto.expanded">&mdash;</span>
+                            <div class="col-xs-6">
+                                <div class="form-inline">
+                                    <label>Sub-rubro del puesto</label>
+                                    <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle="" ng-disabled="disabled">
+                                        Sub-rubro <span class="caret"></span>
                                     </button>
-                                </div>-->
-                                <!--repeat habilidades-->
-                                <div class="list-items animate-show-item" ng-show="category.expanded">
-                                    <ul>
-                                        <!-- ngrepeat: task in habilidades.task -->
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">action</a></li>
+                                        <li><a href="#">another action</a></li>
+                                        <li><a href="#">something else here</a></li>
                                     </ul>
+                                </div>
 
-                                    <!--fin del repeat-->
-                                    <!--<div ng-repeat-end>
-                                        <button ng-show="habilidad.expanded" class="btn btn-primary btn-block btn-sm animate-show-item" disabled="disabled">/ {{ habilidad.name }}</button>
-                                        <hr>
-                                    </div>-->
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label>
+                                        Tipo de contrato
+                                        <input type="text" ng-model="" class="form-control ng-pristine ng-valid ng-touched" placeholder="Directa, contrato de locacion...">
+                                    </label>
+                                </div>
+                            </div>
 
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+
+
+                                    <label>Agregar habilidades requeridas</label>
+                                    <input type="text" ng-model="" class="form-control ng-valid ng-dirty ng-pristine ng-untouched" placeholder="habilidad requerida">
+                                </div>
+                            </div>
+
+                            <div class="col-xs-6">
+                                <div class="form-inline">
+
+                                    <button class="btn btn-primary btn-xs">Agregar</button>
+
+
+                                    <!--repeat start-->
+                                    <!--<div ng-repeat-start="habilidad in habilidades" class="ng-hide-animate">
+                    <button class="btn btn-primary btn-block btn-sm" ng-click="toogglepuesto(puesto)">
+                        {{puesto.nombre}}
+                        <span class="expand-indicator" ng-show="puesto.expanded">&mdash;</span>
+                    </button>
+                </div>-->
+                                    <!--repeat habilidades-->
+                                    <div class="list-items animate-show-item ng-hide" ng-show="category.expanded">
+                                        <ul>
+                                            <!-- ngrepeat: task in habilidades.task -->
+                                        </ul>
+
+                                        <!--fin del repeat-->
+                                        <!--<div ng-repeat-end>
+                        <button ng-show="habilidad.expanded" class="btn btn-primary btn-block btn-sm animate-show-item" disabled="disabled">/ {{ habilidad.name }}</button>
+                        <hr>
+                    </div>-->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-xs-7">
+                                <div class="form-group">
+                                    <label>Remuneración</label>
+                                    <input type="text" ng-model="" class="form-control ng-pristine ng-untouched ng-valid">
                                 </div>
                             </div>
                         </div>
 
-
-
-                        <br><br>
-
-
-                        <br><br>
-
-
-                        <div class="col-xs-5">
-                            <div class="form-inline">
-                                <label>remuneración</label>
-                                <input type="text" ng-model="puesto.remuneracion" class="form-control ng-pristine ng-untouched ng-valid">
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <div class="form-group">
+                                    <div class="btn-group" dropdown="" is-open="status.isopen">
+                                        <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
+                                            Nivel de estudio <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">action</a></li>
+                                            <li><a href="#">another action</a></li>
+                                            <li><a href="#">something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-2 col-xs-offset-1">
-                            <div class="form-inline">
+
+
+                            <div class="col-xs-3">
+                                <div class="form-horizontal">
+                                    <div class="checkbox">
+                                        <label>Finalizado?    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" ng-model="puesto.niveldeestudiofinalizado" class="ng-pristine ng-untouched ng-valid">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-2">
                                 <div class="btn-group" dropdown="" is-open="status.isopen">
-                                    <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle="" ng-disabled="disabled">
-                                        nivel de estudio <span class="caret"></span>
+                                    <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle="" ng-disabled="disabled" aria-haspopup="true" aria-expanded="false">
+                                        Profesion <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="#">action</a></li>
@@ -204,91 +221,74 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-xs-3">
-                            <div class="form-horizontal">
-                                <div class="checkbox">
-                                    <label>finalizado?    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" ng-model="puesto.niveldeestudiofinalizado">
-
+                            <div class="col-xs-5">
+                                <div class="form-inline">
+                                    <label>Experiencia</label>
+                                    <input type="text" ng-model="oferta.añosdeexperiencia" class="form-control ng-pristine ng-untouched ng-valid" placeholder="Experiencia(meses/años)...">
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="row">
 
-                        <br />
-                        <br />
-                        <br />
+                        </div>
                         <!-- dropdown multiselect -->
                         <!--<div class="col-xs-6">
-                        <div class="form-group">
-                            <div ng-dropdown-multiselect="" options="example8data" selected-model="example8model">
-                                <div ng-dropdown-multiselect="" options="example8data" selected-model="example8model" checkboxes="true">dropmultiselect</div>
+    <div class="form-group">
+        <div ng-dropdown-multiselect="" options="example8data" selected-model="example8model">
+            <div ng-dropdown-multiselect="" options="example8data" selected-model="example8model" checkboxes="true">dropmultiselect</div>
 
 
 
+        </div>
+
+    </div>-->
+                        
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <div class="form-group">
+                                    <div class="btn-group" dropdown="" is-open="status.isopen">
+                                        <button type="button" class="btn btn-primary dropdown-toggle ng-pristine ng-untouched ng-valid" ng-model="oferta.distanciaaltrabajo" dropdown-toggle="" ng-disabled="disabled">
+                                            Distancia al trabajo <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">action</a></li>
+                                            <li><a href="#">another action</a></li>
+                                            <li><a href="#">something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">separated link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
 
-                        </div>-->
-
-                        <div class="col-xs-2">
-                            <div class="btn-group" dropdown="" is-open="status.isopen">
-                                <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle="" ng-disabled="disabled">
-                                    profesion <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">action</a></li>
-                                    <li><a href="#">another action</a></li>
-                                    <li><a href="#">something else here</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-4">
-                            <div class="form-inline">
-                                <label>experiencia</label>
-                                <input type="text" ng-model="oferta.añosdeexperiencia" class="form-control" placeholder="experiencia(meses/años)..." />
-                            </div>
-                        </div>
-                        <br />
-                        <br />
-                        <br />
-                        <div class="col-xs-6">
-                            <div class="form-group">
-                                <div class="btn-group" dropdown is-open="status.isopen">
-                                    <button type="button" class="btn btn-primary dropdown-toggle" ng-model="oferta.distanciaaltrabajo" dropdown-toggle ng-disabled="disabled">
-                                        distancia al trabajo <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">action</a></li>
-                                        <li><a href="#">another action</a></li>
-                                        <li><a href="#">something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">separated link</a></li>
-                                    </ul>
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label>Movilidad requerida?</label>
+                                    <div class="btn-group" dropdown="" is-open="status.isopen">
+                                        <button type="button" class="btn btn-primary dropdown-toggle ng-pristine ng-untouched ng-valid" ng-model="oferta.distanciaaltrabajo" dropdown-toggle="" ng-disabled="disabled">
+                                            Si <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Si</a></li>
+                                            <li><a href="#">No</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-xs-6">
-                            <div class="form-group">
-                                <div class="btn-group" dropdown is-open="status.isopen">
-                                    <button type="button" class="btn btn-primary dropdown-toggle" ng-model="oferta.distanciaaltrabajo" dropdown-toggle ng-disabled="disabled">
-                                        movilidad? <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">si</a></li>
-                                        <li><a href="#">no</a></li>
-                                    </ul>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+
+                                    <label>Adicionales</label>
+                                    <textarea cols="25" rows="6" ng-model="" class="form-control ng-pristine ng-untouched ng-valid" required=""> </textarea>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-xs-12">
-                            <div class="form-group">
-
-                                <label>adicionales</label>
-                                <textarea cols="25" rows="6" ng-model="puesto.adicional" class="form-control ng-pristine ng-untouched ng-valid" required=""> </textarea>
-                            </div>
-                        </div>
                     </div>
 
                     <br>
@@ -296,6 +296,7 @@
                 </accordion-group>
 
             </accordion>
+
 
         </div>
     </div>
