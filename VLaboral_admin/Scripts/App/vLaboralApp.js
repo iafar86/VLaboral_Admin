@@ -1,4 +1,5 @@
-﻿var vLaboralApp = angular.module('vLaboralApp', ['ngRoute', 'ngResource', 'ui.router', 'ngCookies', 'ui.bootstrap', 'ngTable',
+﻿/// <reference path="Oferta/ofertaCtrl.js" />
+var vLaboralApp = angular.module('vLaboralApp', ['ngRoute', 'ngResource', 'ui.router', 'ngCookies', 'ui.bootstrap', 'ngTable',
   'ngSanitize', 'ngAnimate', 'ui.select', 'ct.ui.router.extras','angular-loading-bar'])
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $stickyStateProvider, cfpLoadingBarProvider) {
 
@@ -215,7 +216,7 @@
              views: {
                  'content': {
                      templateUrl: '/Scripts/App/Oferta/Partials/ofertaList.html',
-                     controller: '',
+                     controller: 'ofertaCtrl',
                      resolve: {
                          //ofertaDataFactory: 'ofertaDataFactory',
                          //listadoEmpleadores: function () {
@@ -231,7 +232,7 @@
                 views: {
                     'content': {
                         templateUrl: '/Scripts/App/Oferta/Partials/ofertaAdd.html',
-                        controller: '',
+                        controller: 'ofertaCtrl',
                         resolve: {
                             //ofertaDataFactory: 'ofertaDataFactory',
                             //listadoEmpleadores: function () {

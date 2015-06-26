@@ -1,45 +1,45 @@
-﻿angular.module('ui.bootstrap.demo').controller('DatepickerDemoCtrl', function ($scope) {
+﻿vLaboralApp.controller('ofertaCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams) {
 
-    // Disable weekend selection
-    $scope.disabled = function (date, mode) {
-        return (mode === 'day' && (date.getDay() === 0 || date.getDay() === 6));
-    };
+    //// Disable weekend selection
+    //$scope.disabled = function (date, mode) {
+    //    return (mode === 'day' && (date.getDay() === 0 || date.getDay() === 6));
+    //};
 
-    $scope.toggleMin = function () {
-        $scope.minDate = $scope.minDate ? null : new Date();
-    };
-    $scope.toggleMin();
+    //$scope.toggleMin = function () {
+    //    $scope.minDate = $scope.minDate ? null : new Date();
+    //};
+    //$scope.toggleMin();
 
-    $scope.open = function ($event) {
-        $event.preventDefault();
-        $event.stopPropagation();
+    //$scope.open = function ($event) {
+    //    $event.preventDefault();
+    //    $event.stopPropagation();
 
-        $scope.opened = true;
-    };
+    //    $scope.opened = true;
+    //};
 
-    $scope.dateOptions = {
-        formatYear: 'yy',
-        startingDay: 1
-    };
+    //$scope.dateOptions = {
+    //    formatYear: 'yy',
+    //    startingDay: 1
+    //};
 
-    $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-    $scope.format = $scope.formats[0];
+    //$scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+    //$scope.format = $scope.formats[0];
 
-    var tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    var afterTomorrow = new Date();
-    afterTomorrow.setDate(tomorrow.getDate() + 2);
-    $scope.events =
-      [
-        {
-            date: tomorrow,
-            status: 'full'
-        },
-        {
-            date: afterTomorrow,
-            status: 'partially'
-        }
-      ];
+    //var tomorrow = new Date();
+    //tomorrow.setDate(tomorrow.getDate() + 1);
+    //var afterTomorrow = new Date();
+    //afterTomorrow.setDate(tomorrow.getDate() + 2);
+    //$scope.events =
+    //  [
+    //    {
+    //        date: tomorrow,
+    //        status: 'full'
+    //    },
+    //    {
+    //        date: afterTomorrow,
+    //        status: 'partially'
+    //    }
+    //  ];
 
     //$scope.getDayClass = function (date, mode) {
     //    if (mode === 'day') {
@@ -56,6 +56,32 @@
 
     //    return '';
     //};
+
+
+    //iafar: Puestos
+
+    $scope.Puestos = ["1"];
+    $scope.CantPuestos = 1;
+   
+
+    $scope.AddPuesto = function () {
+        $scope.Puestos.push("1");
+        ($scope.CantPuestos)++;
+    };
+
+
+
+    //$scope.SubRubro=[]
+    //$scope.Puestos = [{ Nombre: "Puesto Nuevo" },
+    //    {cantVacantes:0},
+    //    { Remuneracion: 0.00 },
+    //    { Requisitos: "" },
+    //    {SubRubro:[]},
+    //    { Disponibilidad: "" },
+
+
+
+    //];
 
 
 

@@ -1,1 +1,69 @@
-﻿lista de Ofertas
+﻿<div class="row">
+    <div class="col-md-12">
+
+        <div class="box dark">
+            <header>
+                <div class="icons">
+                    <i class="glyphicon glyphicon-lock"></i>
+                </div>
+                <h5>Mis Ofertas Laborales</h5>
+                <div class="toolbar">
+                    <div class="btn btn-sm btn-default minimize-box">
+                        <a>
+                            <i class="fa fa-angle-up"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <br />
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="col-xs-3">
+                        <div class="btn-group" dropdown is-open="status.isopen">
+                            <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
+                                Buscar Por <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Nombre</a></li>
+                                <li><a href="#">Puesto</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Otros</a></li>
+                            </ul>
+                        </div> <!--Boton buscar por-->
+                    </div><!--Buscar por-->
+                    <div class="col-xs-9">
+                        <input type="text" ng-model="" class="form-control" placeholder="Ingrese lo que quiere buscar" required />
+                    </div><!--Cadena de busqueda-->
+                </div><!--Nombre de oferta-->
+                <div class="col-xs-4">
+                    <div class="btn-group">
+                        <label class="btn btn-warning" uncheckable>Pendiente</label>
+                        <label class="btn btn-success" uncheckable>Publicada</label>
+                        <label class="btn btn-default" uncheckable>Terminada</label>
+                    </div>
+                </div>
+            </div><!--Busqueda de oferta-->
+            <br />
+            <div class="row">
+                <div class="col-xs-12">
+                    <accordion>
+                        <accordion-group is-open="true">
+                            <accordion-heading>
+                                Resultado de Ofertas
+                            </accordion-heading >
+                            <div class="row text-center text-info">
+                                No se encontraron coincidencias
+                            </div>
+                            
+
+
+                        </accordion-group>
+                    </accordion>
+                </div>
+
+
+
+            </div> <!--Lista de Resultados-->
+        </div>
+    </div>
+</div>
