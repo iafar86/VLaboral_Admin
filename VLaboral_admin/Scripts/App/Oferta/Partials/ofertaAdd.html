@@ -1,5 +1,5 @@
 ﻿<div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 col-lg-12 col-xs-12">
 
         <div class="box dark">
             <header>
@@ -14,24 +14,25 @@
                         </a>
                     </div>
                 </div>
-            </header>
-        
+            </header> <!--Encabezado-->
+
+            <div class="row">
             <div class="col-xs-4 col-xs-offset-1">
-                <br />    
-            <img src="../../../../Icon.png" class="img-circle img-responsive" />
+                <br />
+                <img src="../../../../Icon.png" class="img-circle img-responsive" />
             </div> <!--Imagen Principal de empresa-->
-            
 
             <div class="col-xs-6">
-            <br />
+                <br />
                 <div class="form-group">
                     <label>Nombre de la Oferta</label>
-                    <input type="text" class="form-control" required />
-                </div>
+                    <input type="text" class="form-control" ng-model="Oferta.NombreDeLaOferta" required />
+                </div>  <!--Nombre de la oferta-->
+
                 <div class="form-inline">
                     <div class="form-group">
-                        <div class="col-xs-4">
-                            <div class="btn-group" dropdown is-open="status.isopen">
+                        <div class="col-xs-5">
+                            <!--<div class="btn-group" dropdown is-open="status.isopen">
                                 <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle ng-disabled="disabled">
                                     Rubro <span class="caret"></span>
                                 </button>
@@ -40,53 +41,60 @@
                                     <li><a href="#">Rubro 2</a></li>
                                     <li><a href="#">Rubro 3</a></li>
                                 </ul>
-                            </div>
-                        </div>
-                        <div class="col-xs-8">
+                            </div>-->
+                            <label>Rubro
+                                <select ng-model="Oferta.Rubro" class="btn btn-primary dropdown-toggle">
+                                    <option ng-repeat="Rubros in Rubros" value="Rubro.Nombre">{{Rubro.Nombre}}</option>
+                                </select>
+                            </label>
+                        </div> <!--Rubro-->
+
+                        <div class="col-xs-7">
                             <div class='container-fluid'>
 
                                 <label>Lugar</label>
                                 <input type="text" class="form-control">
                             </div>
-                        </div>
+                        </div> <!--Lugar-->
                     </div>
 
-                </div>
+                </div> <!--Rubro--> <!--Lugar-->
                 <br />
                 <div class="row">
 
-                    <div class="col-md-6">
+                    <div class="col-xs-6">
                         <label>Fecha de Inicio de Oferta</label>
                         <p class="input-group">
-                            <input type="date" ng-required="true" close-text="Close" />
+                            <input type="date" ng-required="true" close-text="Close" class="form-control"/>
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
                             </span>
                         </p>
-                    </div>
+                    </div> <!--Fecha de Inicio de la Oferta-->
 
 
-                    <div class="col-md-6">
+                    <div class="col-xs-6">
                         <label>Fecha de Fin de la Oferta</label>
                         <p class="input-group">
-                            <input type="date" ng-required="true" close-text="Close" />
+                            <input type="date" ng-required="true" close-text="Close" class="form-control"/>
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-default"><i class="glyphicon glyphicon-calendar"></i></button>
                             </span>
                         </p>
-                    </div>
-                </div>
+                    </div> <!--Fecha de Fin de la Oferta-->
+                </div> <!--Fecha de Inicio de la Oferta--> <!--Fecha de Fin de la Oferta-->
 
                 <div class="form-group">
 
                     <label>Descripcion</label>
                     <textarea cols="25" rows="6" class="form-control" required> </textarea>
-                </div>
+                </div> <!--Descripcion de la Oferta-->
             </div> <!--Primer seccion de carga de datos(panel derecho)-->
 
-      
+        </div> <!--Panel Principal de Oferta-->
 
-            <div class="col-xs-12 ">
+            <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 ">
 
                 <accordion>
                     <accordion-group>
@@ -122,7 +130,7 @@
                                                         <label>Puesto</label>
                                                         <input type="text" class="form-control ng-pristine ng-valid ng-touched" placeholder="Nombre del puesto...">
                                                     </div>
-                                                </div>
+                                                </div> <!--Nombre del Puesto-->
 
 
                                                 <div class="col-xs-6">
@@ -138,8 +146,8 @@
                                                         </ul>
                                                     </div>
 
-                                                </div>
-                                            </div>
+                                                </div> <!--Sub Rubro de la Oferta-->
+                                            </div><!--Nombre del Puesto--> <!--Sub Rubro de la Oferta-->
                                             <br>
 
                                             <div class="row">
@@ -152,13 +160,11 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
+                                            </div><!--Tipo de Contrato-->
 
                                             <div class="row">
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
-
-
                                                         <label>Agregar habilidades requeridas</label>
                                                         <input type="text" class="form-control ng-valid ng-dirty ng-pristine" placeholder="habilidad requerida">
                                                     </div>
@@ -177,7 +183,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div><!--Habilidades-->
 
                                             <div class="row">
                                                 <div class="col-xs-7">
@@ -186,7 +192,7 @@
                                                         <input type="text" class="form-control ng-pristine ng-valid">
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> <!--Remuneracion-->
 
                                             <div class="row">
                                                 <div class="col-xs-2">
@@ -202,7 +208,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> <!--Nivel de Estudio-->
 
 
                                                 <div class="col-xs-3">
@@ -212,7 +218,7 @@
 
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> <!--Finalizado-->
 
                                                 <div class="col-xs-2">
                                                     <div class="btn-group" dropdown="" is-open="status.isopen">
@@ -225,16 +231,15 @@
                                                             <li><a href="#">something else here</a></li>
                                                         </ul>
                                                     </div>
-                                                </div>
+                                                </div> <!--Profesion-->
 
                                                 <div class="col-xs-5">
                                                     <div class="form-inline">
                                                         <label>Experiencia</label>
                                                         <input type="text" class="form-control ng-pristine  ng-valid" placeholder="Experiencia(meses/años)...">
                                                     </div>
-                                                </div>
-                                            </div>
-
+                                                </div> <!--Experiencia-->
+                                            </div><!--Nivel de Estudio--> <!--Finalizado--> <!--Profesion--> <!--Experiencia-->
                                             <!-- dropdown multiselect -->
 
                                             <div class="row">
@@ -253,7 +258,7 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> <!--Distancia al Trabajo-->
 
                                                 <div class="col-xs-6">
                                                     <div class="form-group">
@@ -268,8 +273,8 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
+                                                </div> <!--Movilidad Requerida-->
+                                            </div> <!--Distancia al Trabajo--> <!--Movilidad Requerida-->
 
                                             <div class="row">
                                                 <div class="col-xs-12">
@@ -279,7 +284,7 @@
                                                         <textarea cols="25" rows="6" class="form-control ng-pristine  ng-valid" required=""> </textarea>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> <!--Adicionales-->
 
                                         </div>
 
@@ -293,20 +298,12 @@
                             </div> <!--Puesto nuevo-->
 
                         </div> <!--ng-Repeat container-->
-            <div class="col-xs-1">
-                    <button type="button" class="btn btn-primary" ng-model="" >
-                        Guardar
-                    </button>
-            </div>
-            <div class="col-xs-2">
-                <button type="button" class="btn btn-primary" ng-model=""  >
-                    Guardar y Publicar
-                </button>
-            </div>
-            <br />
-        </div>
-        
-        <br />
+
+                        <br />
+
+
+
+                        <br />
 
 
                     </accordion-group>
@@ -315,18 +312,30 @@
 
             </div> <!--Seccion Agregar De Puestos de Ofertas-->
 
-           
+        </div> <!--Panel de Puestos-->
+            
+            <div class="row">
+                <footer class="pull-right">
+                    <div class="col-xs-4">
+                        <button type="button" class="btn btn-primary" ng-model="">
+                            Guardar
+                        </button>
+                    </div> <!--Boton Guardar-->
+                    <div class="col-xs-3">
+                        <button type="button" class="btn btn-primary" ng-model="">
+                            Guardar y Publicar
+                        </button>
+                    </div> <!--Boton Guardar y Publicar-->
+                </footer><!--Botones-->
+            </div>
+            
+            <br />
 
         </div> <!--barra superior-->
+        
 
 
-
-
-
-        <br />
+        
     </div><!--Contenedor de Paneles de Vista-->
-
-
-
 
 </div> <!--Contenedor Principal-->
