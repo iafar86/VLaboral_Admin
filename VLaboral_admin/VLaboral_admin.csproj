@@ -3289,6 +3289,8 @@
     <Content Include="Scripts\App\Oferta\ofertaDataFactory.js" />
     <Content Include="Scripts\App\Oferta\Partials\ofertaAdd.html" />
     <Content Include="Scripts\App\Oferta\Partials\ofertaList.html" />
+    <Content Include="Scripts\App\Rubro\rubroCtrl.js" />
+    <Content Include="Scripts\App\Rubro\rubroDataFactory.js" />
     <Content Include="Scripts\App\vLaboralApp.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -4189,6 +4191,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\App\Rubro\Partials\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

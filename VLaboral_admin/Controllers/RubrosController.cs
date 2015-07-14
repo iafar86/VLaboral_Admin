@@ -18,7 +18,9 @@ namespace VLaboral_admin.Models
         // GET: api/Rubros
         public IQueryable<Rubro> GetRubros()
         {
-            return db.Rubros;
+            var result = db.Rubros.Include(r => r.SubRubros);
+
+            return result;
         }
 
         // GET: api/Rubros/5

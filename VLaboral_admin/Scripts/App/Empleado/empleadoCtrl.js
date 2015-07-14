@@ -1,4 +1,4 @@
-﻿vLaboralApp.controller('empleadoCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams, empleadoDataFactory, listadoEmpleados, infoEmpleado) {
+﻿vLaboralApp.controller('empleadoCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams, empleadoDataFactory, rubroDataFactory, listadoEmpleados, infoEmpleado, listadoRubros) {
     
     $scope.infoEmpleado = infoEmpleado;
     var infoActualEmpleado = infoEmpleado;
@@ -33,7 +33,7 @@
     $scope.cancelEmpleadoAdd = function () {
         $scope.empleado = null;
     };
-    //#endregion
+    //#endRegion
 
     //#region Modificacion de empleados
 
@@ -101,4 +101,21 @@
     //    }
     //});
     //#endregion
+
+
+
+    //#region Rubro/SubRubro
+    $scope.rubros = listadoRubros;
+    $scope.empleado.rubros = [];
+
+    $scope.rubroAdd= function(rubro) {
+        $scope.empleado.rubros.push(rubro);
+    }
+
+
+
+
+    //#endregion
+
+
 });
