@@ -1,5 +1,19 @@
 ﻿vLaboralApp.controller('empleadoCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams, empleadoDataFactory, rubroDataFactory, listadoEmpleados, infoEmpleado, listadoRubros) {
     
+    //#region Rubro/SubRubro
+
+    //$scope.rubros = "";
+    //$scope.rubros = rubroDataFactory.query();
+   
+    $scope.rubros = listadoRubros;
+   
+
+    $scope.rubroAdd = function (rubro) {
+        $scope.empleado.rubros.push(rubro);
+    }
+    //#endregion
+
+
     $scope.infoEmpleado = infoEmpleado;
     var infoActualEmpleado = infoEmpleado;
     $scope.empleados = listadoEmpleados;
@@ -104,18 +118,7 @@
 
 
 
-    //#region Rubro/SubRubro
-    $scope.rubros = listadoRubros;
-    $scope.empleado.rubros = [];
-
-    $scope.rubroAdd= function(rubro) {
-        $scope.empleado.rubros.push(rubro);
-    }
-
-
-
-
-    //#endregion
+  
 
 
 });

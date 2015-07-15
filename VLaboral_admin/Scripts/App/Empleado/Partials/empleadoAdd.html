@@ -23,7 +23,7 @@
                         <div class="col-md-12">
                             <input class="btn btn-default" type="file" ng-model="infoEmpleado.ImagenPerfil" accept="image/*" image="image" />
 
-                            <img ng-show="image" src="image/*" type="{{image.file.type}}" class="img-responsive" />
+                            <img ng-show="image" src="image/*"  class="img-responsive" />
                         </div>
                         
 
@@ -71,30 +71,28 @@
                             </div><!--Ubicacion Actual-->
                         </div> <!--Ubicacion Actual/Origen-->
                     <br />
-                        <div class="row" ng-repeat="Rubros in rubro.nombre">
+                   
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-inline">
-                                    <label>Rubro</label>
-                                    <select class="btn btn-block btn-primary" ng-options="Rubros.Nombre in Rubros" ng-model="infoEmpleado.Rubro"></select>
-                                </div>
-                            </div> <!--Rubro-->
-                        </div>
-                        <br />
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="row" ng-repeat="SubRubros in rubros.SubRubros">
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="form-inline">
-                                        <label>Sub-Rubro</label>
-                                        <select class="btn btn-block btn-primary" ng-options=" SubRubros in Rubros.SubRubros.Nombre" ng-model="infoEmpleado.SubRubro"></select>
+                                        <label>Rubro</label>
+                                        <select class="btn btn-block btn-primary" ng-options="rubro.Nombre for rubro in rubros" ng-model="selectRubro"></select>
                                     </div>
                                 </div>
-                                <br />
+                            </div><!--Rubro-->
+                            <br />
 
-                            </div> <!--SubRubro-->
-                        </div>
-                    </div><!--Rubro/SubRubro-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                        <div class="form-inline">
+                                            <label>Sub-Rubro</label>
+                                            <select class="btn btn-block btn-primary" ng-options=" subRubro.Nombre for subRubro in selectRubro.SubRubros" ng-model="selectSubRubro"></select>
+                                        </div>
+                                    <br />
+                                </div> <!--SubRubro-->
+                            </div>
+                        </div><!--Rubro/SubRubro-->
                         <div class="row">
                         <div class="col-lg-12">
                             <button class="btn btn-default btn-primary" ng-click="AddRubro()">
