@@ -47,7 +47,7 @@
     $scope.cancelEmpleadoAdd = function () {
         $scope.empleado = null;
     };
-    //#endRegion
+    //#endregion
 
     //#region Modificacion de empleados
 
@@ -121,4 +121,8 @@
   
 
 
+    //$scope.AddRubro = function () {
+    //    $scope.Rubros.push("20");
+    //    ($scope.CantRubro)++;
+    //}
 });

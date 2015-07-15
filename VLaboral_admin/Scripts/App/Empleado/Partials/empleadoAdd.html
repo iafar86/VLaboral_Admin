@@ -24,6 +24,7 @@
                             <input class="btn btn-default" type="file" ng-model="infoEmpleado.ImagenPerfil" accept="image/*" image="image" />
 
                             <img ng-show="image" src="image/*"  class="img-responsive" />
+                            <img ng-show="image" src="image/*" type="{{image.file.type}}" class="img-responsive" />
                         </div>
                         
 
@@ -35,46 +36,88 @@
                        </div>
                     </div><!--Imagen de Perfil-->
 
-                    <div class="col-xs-9 ">
-                        <div class="row">
-                            <div class="col-xs-4">
-                                <label>Dni</label>
-                                <input type="text" ng-model="infoEmpleado.Dni" class="form-control" required />
-                            </div><!--DNI-->
-                            <div class="col-xs-8">
-                                <label>Cuil</label>
-                                <input type="text" ng-model="infoEmpleado.Cuil" class="form-control" required />
-                            </div> <!--CUIL-->
-                        </div> <!--DNI/CUIL-->
-                    <br />
-                        <div class="row">
-                            <div class="col-xs-8">
-                                <label>Nombre y Apellido</label>
-                                <input type="text" ng-model="infoEmpleado.NombreApellido" class="form-control" />
-                            </div>
-                            <div class="col-xs-4">
-                                <label>Fecha de Nacimiento</label>
-                                <input class="form-control" type="date" ng-model="infoEmpleado.FecNacimiento">
-                            </div>
-                        </div> <!--Nombre y Apellido/Fecha de Nacimiento-->
-                    <br />
+                    <div class="col-xs-8 col-xs-offset-1">
+                            <div class="box dark col-xs-12">
+                             <header>Datos personales</header>
+                                <br />
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <label>Dni</label>
+                                        <input type="text" ng-model="infoEmpleado.Dni" class="form-control" required />
+                                    </div><!--DNI-->
+                                    <div class="col-xs-8">
+                                        <label>Cuil</label>
+                                        <input type="text" ng-model="infoEmpleado.Cuil" class="form-control" required />
+                                    </div> <!--CUIL-->
+                                </div> <!--DNI/CUIL-->
+                                <br />
+                                <div class="row">
+                                    <div class="col-xs-8">
+                                        <label>Nombre y Apellido</label>
+                                        <input type="text" ng-model="infoEmpleado.NombreApellido" class="form-control" />
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <label>Fecha de Nacimiento</label>
+                                        <input class="form-control" type="date" ng-model="infoEmpleado.FecNacimiento">
+                                    </div>
+                                </div> <!--Nombre y Apellido/Fecha de Nacimiento-->
+                                <br />
 
-                        <div class="row">
-                            <div class="col-xs-6">
-                            <label>Naci en</label>
-                                <location-lookup ng-model="infoEmpleado.UbicacionOrigen" limit-to="4"></location-lookup>
-                            </div> <!--Ubicación de Origen-->
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <label>Naci en</label>
+                                        <location-lookup ng-model="infoEmpleado.UbicacionOrigen" limit-to="4"></location-lookup>
+                                    </div> <!--Ubicación de Origen-->
 
-                            <div class="col-xs-6">
-                            <label>Estoy en</label>
-                                <location-lookup ng-model="infoEmpleado.UbicacionActual" limit-to="4"></location-lookup>
-                            </div><!--Ubicacion Actual-->
-                        </div> <!--Ubicacion Actual/Origen-->
-                    <br />
+                                    <div class="col-xs-6">
+                                        <label>Estoy en</label>
+                                        <location-lookup ng-model="infoEmpleado.UbicacionActual" limit-to="4"></location-lookup>
+                                    </div><!--Ubicacion Actual-->
+                                </div> <!--Ubicacion Actual/Origen-->
+                            </div><!--Datos personales-->
+                            
+
+                            <br />
                    
                         <div class="row">
                             <div class="row">
                                 <div class="col-md-6">
+                                         <label>Telefono</label>
+                                         <input type="text" ng-model="infoEmpleado.Telefono" class="form-control" required />
+                                     </div> <!--Tel-->
+                                     <div class="col-xs-7">
+                                         <label>Celular</label>
+                                         <input type="text" ng-model="infoEmpleado.Celular" class="form-control" />
+                                     </div>
+                                 </div><!--Tel/Cel-->
+                                 <br />
+
+                                 <div class="row">
+                                     <div class="col-xs-12">
+                                         <label>Correo electronico</label>
+                                         <input type="email" ng-model="infoEmpleado.Email" class="form-control" required />
+                                     </div>
+                                 </div> <!--EMail-->
+                                 <br />
+                             </div><!--Panel datos de contacto-->
+
+                            <br />
+                       
+
+                    </div> <!--Datos Basicos Empleado-->
+
+                    <div class="row col-md-9 col-md-offset-3 center-block">
+                        <label>Resumen Curricular (500 caracteres)</label>
+                        <textarea cols="25" rows="6" class="form-control" required ng-model="infoEmpleado.ResumenCurricular"></textarea>
+                    </div><!--Carga de resumen curricular-->
+
+                    <br />
+                    <div class="row col-md-9 col-md-offset-3 center-block">
+                        <div ng-repeat="Rubros in Rubros">
+                            <div class="box dark">
+                                <header>Nuevo rubro</header>
+                                <div class="row">
+                                    <div class="col-lg-6 col-lg-offset-1">
                                     <div class="form-inline">
                                         <label>Rubro</label>
                                         <select class="btn btn-block btn-primary" ng-options="rubro.Nombre for rubro in rubros" ng-model="selectRubro"></select>
@@ -92,43 +135,18 @@
                                     <br />
                                 </div> <!--SubRubro-->
                             </div>
+                            </div>
+
                         </div><!--Rubro/SubRubro-->
                         <div class="row">
-                        <div class="col-lg-12">
-                            <button class="btn btn-default btn-primary" ng-click="AddRubro()">
-                                Agregar Rubro
-                            </button>
-                        </div>
-                    </div><!--Agregar Rubro-->
-
-                    <br/>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <label>Telefono</label>
-                                <input type="text" ng-model="infoEmpleado.Telefono" class="form-control" required />
-                            </div> <!--Tel-->
-                            <div class="col-xs-7">
-                                <label>Celular</label>
-                                <input type="text" ng-model="infoEmpleado.Celular" class="form-control" />
+                            <div class="col-lg-12">
+                                <button class="btn btn-default btn-primary" ng-click="AddRubro()">
+                                    Agregar Rubro
+                                </button>
                             </div>
-                        </div><!--Tel/Cel-->
-                    <br />
+                        </div><!--Agregar Rubro-->
+                    </div>
 
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <label>Correo electronico</label>
-                                <input type="email" ng-model="infoEmpleado.Email" class="form-control" required />
-                            </div>
-                        </div> <!--EMail-->
-                    <br />
-
-                    </div> <!--Datos Basicos Empleado-->
-
-                    <div class="row col-md-9 col-md-offset-3">
-                        <label>Resumen Curricular (500 caracteres)</label>
-                        <textarea cols="25" rows="6" class="form-control" required ng-model="infoEmpleado.ResumenCurricular"></textarea>
-                    </div><!--Carga de resumen curricular-->
                 </div> <!--Datos e imagen empleado-->
             </div> <!--Cuerpo de Vista-->
             <div class="modal-footer">
