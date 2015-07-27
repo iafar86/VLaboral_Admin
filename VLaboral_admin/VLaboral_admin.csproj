@@ -270,7 +270,6 @@
     <Content Include="assets\css\style-switcher.css" />
     <Content Include="assets\css\theme.css" />
     <Content Include="assets\img\cp.png" />
-    <Content Include="assets\img\employeeProfile.jpg" />
     <Content Include="assets\img\logo.png" />
     <Content Include="assets\img\metis-tile.png" />
     <Content Include="assets\img\pattern\always_grey.png" />
@@ -298,7 +297,6 @@
     <Content Include="assets\img\pattern\white_tiles.png" />
     <Content Include="assets\img\pattern\wood_1.png" />
     <Content Include="assets\img\user.gif" />
-    <Content Include="assets\img\usrIcon.png" />
     <Content Include="assets\js\app.js" />
     <Content Include="assets\js\app.min.js" />
     <Content Include="assets\js\core.js" />
@@ -4162,8 +4160,18 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\loading-bar.js" />
     <Content Include="Scripts\loading-bar.min.js" />
+    <Content Include="Scripts\locator\location-lookup-directive.js" />
+    <Content Include="Scripts\locator\location-predictions-directive.js" />
+    <Content Include="Scripts\locator\location.css" />
+    <Content Include="Scripts\locator\locator-tpl.js" />
+    <Content Include="Scripts\locator\locator.min.js" />
+    <Content Include="Scripts\locator\powered-by-google-on-white.png" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\ng-google-chart\ng-google-chart.js" />
+    <Content Include="Scripts\ngFlow\ng-flow-standalone.js" />
+    <Content Include="Scripts\ngFlow\ng-flow-standalone.min.js" />
+    <Content Include="Scripts\ngFlow\ng-flow.js" />
+    <Content Include="Scripts\ngFlow\ng-flow.min.js" />
     <Content Include="Scripts\ngTable\ng-table.css" />
     <Content Include="Scripts\ngTable\ng-table.js" />
     <Content Include="Scripts\npm.js" />

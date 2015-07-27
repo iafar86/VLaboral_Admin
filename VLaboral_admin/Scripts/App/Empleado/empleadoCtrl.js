@@ -1,4 +1,5 @@
-﻿vLaboralApp.controller('empleadoCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams, empleadoDataFactory, rubroDataFactory, listadoEmpleados, infoEmpleado, listadoRubros) {
+﻿vLaboralApp.controller('empleadoCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams, empleadoDataFactory, rubroDataFactory
+    , listadoEmpleados, infoEmpleado, listadoRubros, location) {
     
     //#region Rubro/SubRubro
 
@@ -30,6 +31,7 @@
         data = $scope.empleados;
     };
 
+    
     $scope.empleadoAdd = function (empleado) {
         empleadoDataFactory.save(empleado).$promise.then(
             function () {
@@ -116,6 +118,16 @@
     //});
     //#endregion
 
+    //#region location
+    location.get(angular.noop, angular.noop);
+    $scope.isModalVisible = false;
+
+    $scope.toggleModal = function () {
+        $scope.isModalVisible = !$scope.isModalVisible;
+    };
+        
+    $scope.$watch('lookedUpLocation', $scope.toggleModal);
+    //#endregion
 
 
   
