@@ -3,15 +3,25 @@
     
     //#region Rubro/SubRubro
 
-    //$scope.rubros = "";
-    //$scope.rubros = rubroDataFactory.query();
-   
-    $scope.rubros = listadoRubros;
-   
+    $scope.rubros = listadoRubros; //Carga todos los rubros y subrubros existentes
+    $scope.rubrosList = [];
+    $scope.rubroSelect = [];
+    $scope.subRubroSelect = [];
 
-    $scope.rubroAdd = function (rubro) {
-        $scope.empleado.rubros.push(rubro);
-    }
+    $scope.AddRubro = function () {
+        rubroTemp = {
+            rId: $scope.rubroSelect.Id,
+            rNombre: $scope.rubroSelect.Nombre,
+            srId: $scope.subRubroSelect.Id,
+            srNombre: $scope.subRubroSelect.Nombre
+        };
+        $scope.rubrosList.push(rubroTemp);
+    } //Agrega un nuevo rubro a la lista de Rubro/SubRubro del empleado
+
+    $scope.RubroDel = function (item) {
+        var index = $scope.rubrosList.indexOf(item);
+        $scope.rubrosList.splice(index, 1);
+    }//Elimino un Rubro/SubRubro de la lista
     //#endregion
 
 
