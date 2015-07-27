@@ -1,6 +1,6 @@
 ﻿/// <reference path="Oferta/ofertaCtrl.js" />
 var vLaboralApp = angular.module('vLaboralApp', ['ngRoute', 'ngResource', 'ui.router', 'ngCookies', 'ui.bootstrap', 'ngTable',
-  'ngSanitize', 'ngAnimate', 'ui.select', 'ct.ui.router.extras','angular-loading-bar','locator','flow'])
+  'ngSanitize', 'ngAnimate', 'ui.select', 'ct.ui.router.extras','angular-loading-bar','flow'])
     .config(function ($stateProvider, $urlRouterProvider, $httpProvider, $stickyStateProvider, cfpLoadingBarProvider) {
 
         cfpLoadingBarProvider.includeSpinner = true;

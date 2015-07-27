@@ -16,219 +16,203 @@
                 <br />
                 <div class="row">
                     <div class="row">
-                        <div class="col-xs-4 text-center">
+                        <div>
                             <br />
-                            <div class="row">
-                                <!--<div class="col-md-12">
-                                <div flow-init="{singleFile:true}" >
-                                    <div class="thumbnail ng-hide" ng-show="!$flow.files.length">
-                                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlYmU1YmRhYjcgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGViZTViZGFiNyI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MSIgeT0iOTQuNSI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==">
+                            <div class="col-xs-4 text-center">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div flow-init="{singleFile:true}">
+                                            <div class="thumbnail ng-hide" ng-show="!$flow.files.length">
+                                                <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTcxIiBoZWlnaHQ9IjE4MCIgdmlld0JveD0iMCAwIDE3MSAxODAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzEwMCV4MTgwCkNyZWF0ZWQgd2l0aCBIb2xkZXIuanMgMi42LjAuCkxlYXJuIG1vcmUgYXQgaHR0cDovL2hvbGRlcmpzLmNvbQooYykgMjAxMi0yMDE1IEl2YW4gTWFsb3BpbnNreSAtIGh0dHA6Ly9pbXNreS5jbwotLT48ZGVmcz48c3R5bGUgdHlwZT0idGV4dC9jc3MiPjwhW0NEQVRBWyNob2xkZXJfMTRlYmU1YmRhYjcgdGV4dCB7IGZpbGw6I0FBQUFBQTtmb250LXdlaWdodDpib2xkO2ZvbnQtZmFtaWx5OkFyaWFsLCBIZWx2ZXRpY2EsIE9wZW4gU2Fucywgc2Fucy1zZXJpZiwgbW9ub3NwYWNlO2ZvbnQtc2l6ZToxMHB0IH0gXV0+PC9zdHlsZT48L2RlZnM+PGcgaWQ9ImhvbGRlcl8xNGViZTViZGFiNyI+PHJlY3Qgd2lkdGg9IjE3MSIgaGVpZ2h0PSIxODAiIGZpbGw9IiNFRUVFRUUiLz48Zz48dGV4dCB4PSI2MSIgeT0iOTQuNSI+MTcxeDE4MDwvdGV4dD48L2c+PC9nPjwvc3ZnPg==">
+                                            </div>
+                                            <div class="thumbnail" ng-show="$flow.files.length">
+                                                <img flow-img="$flow.files[0]" />
+                                            </div>
+                                            <div>
+                                                <span class="btn btn-primary ng-hide" ng-show="!$flow.files.length" flow-btn="">
+                                                    Seleccionar Foto de Perfil<input type="file" style="visibility: hidden; position: absolute;">
+                                                </span>
+                                                <span class="btn btn-info" ng-show="$flow.files.length" flow-btn="">Cambiar<input type="file" style="visibility: hidden; position: absolute;"></span>
+                                                <span class="btn btn-danger" ng-show="$flow.files.length" ng-click="$flow.cancel()">
+                                                    Eliminar
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <button type="submit" class="btn btn-danger">
+                                                    Subir Curriculum (PDF)
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="thumbnail" ng-show="$flow.files.length">
-                                        <img flow-img="$flow.files[0]" />
-                                    </div>
-                                    <div>
-                                        <span class="btn btn-primary ng-hide" ng-show="!$flow.files.length" flow-btn="">
-                                            Seleccionar Foto de Perfil<input type="file" style="visibility: hidden; position: absolute;">
-                                        </span>
-                                        <span class="btn btn-info" ng-show="$flow.files.length" flow-btn="">Cambiar<input type="file" style="visibility: hidden; position: absolute;"></span>
-                                        <span class="btn btn-danger" ng-show="$flow.files.length" ng-click="$flow.cancel()">
-                                            Eliminar
-                                        </span>
-                                        
-                                    </div>
-                                </div>                                  
+                                </div>
                             </div>
-                            <div class="row">
-                                <button type="submit" class="btn btn-danger">
-                                    Subir Curriculum (PDF)
-                                </button>
-                            </div>
-                        </div><!--Imagen de Perfil-->
+                            <!--Imagen de Perfil-->
 
-                        <div class="col-xs-7">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">Datos Basicos</div> <!--Titulo Panel-->
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-xs-4">
-                                            <label>Dni</label>
-                                            <input type="text" ng-model="infoEmpleado.Dni" class="form-control" required />
-                                        </div><!--DNI-->
-                                        <div class="col-xs-8">
-                                            <label>Cuil</label>
-                                            <input type="text" ng-model="infoEmpleado.Cuil" class="form-control" required />
-                                        </div> <!--CUIL-->
-                                    </div> <!--DNI/CUIL-->
-                                    <br />
-                                    <div class="row">
-                                        <div class="col-xs-8">
-                                            <label>Nombre y Apellido</label>
-                                            <input type="text" ng-model="infoEmpleado.NombreApellido" class="form-control" />
-                                        </div>
-                                        <div class="col-xs-4">
-                                            <label>Fecha de Nacimiento</label>
-                                            <input class="form-control" type="date" ng-model="infoEmpleado.FecNacimiento">
-                                        </div>
-                                    </div> <!--Nombre y Apellido/Fecha de Nacimiento-->
-                                    <br />
-
-                                    <div class="row">
-                                <nav>
-                                    <h1>
-                                        Locator <small>a set of google location services for AngularJS</small>
-                                    </h1>
-                                </nav>
-
-                                <small class="tag-line">A set of google location services for AngularJS</small>
-
-                                <div class="column black flex-item">
-                                    <h2>
-                                        Location Lookup
-                                        <img src="../../../locator/powered-by-google-on-white.png" width="104px" />
-                                    </h2>
-                                    <location-lookup ng-model="lookedUpLocation" limit-to="4"></location-lookup>
-                                </div>
-
-                            </div> <!--Ubicacion Actual/Origen-->
-                        </div><!--Datos personales-->
-
-                        <br />
-                            <br />
-
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">Datos de contacto</div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-xs-5">
-                                            <label>Telefono</label>
-                                            <input type="text" ng-model="infoEmpleado.Telefono" class="form-control" required />
-                                        </div> <!--Tel-->
-                                        <div class="col-xs-7">
-                                            <label>Celular</label>
-                                            <input type="text" ng-model="infoEmpleado.Celular" class="form-control" />
-                                        </div>
-                                    </div><!--Tel/Cel-->
-                                    <br />
-
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <label>Correo electronico</label>
-                                            <input type="email" ng-model="infoEmpleado.Email" class="form-control" required />
-                                        </div>
-                                    </div> <!--EMail-->
-                                    <br />
-                                </div>
-                            </div><!--Panel datos de contacto-->
-                        <br />
-                            <br />
-
-
-                        </div> <!--Datos empleado-->
-                    </div> <!--Datos Basicos Empleado-->
-
-                    </div> <!--Panel superior(imagen/datos basicos/datos de contacto)-->
-
-                    <div class="row">
-                        <div class="row">
-                            <div class="col-xs-10 col-xs-offset-1">
+                            <div class="col-xs-7">
                                 <div class="panel panel-primary">
-                                    <div class="panel-heading">Resumen Curricular (500 caracteres)</div>
-                                    <div class="panel-body">
-                                        <textarea cols="25" rows="6" class="form-control" required ng-model="infoEmpleado.ResumenCurricular"></textarea>
-                                        </div>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div><!--Carga de resumen curricular-->
-                        </div>
-
-
-                        <br />
-
-
-                        <div class="row">
-                            <div class=" col-xs-10 col-xs-offset-1">
-                                <div class="panel panel-primary">
-                                    <div class="panel-heading">Rubros a los que pertenece</div>
+                                    <div class="panel-heading">Datos Basicos</div> <!--Titulo Panel-->
                                     <div class="panel-body">
                                         <div class="row">
-
-                                            <div class="col-md-4 form-inline">
-                                                <label>Rubro</label>
-                                                <select class="btn btn-block btn-primary" ng-options="rubro.Nombre for rubro in rubros" ng-model="rubroSelect"></select>
-
-                                            </div><!--Rubro-->
-                                            <div class="col-md-4">
-                                                <label>Sub-Rubro</label>
-                                                <select class="btn btn-block btn-primary" ng-options="subRubro.Nombre for subRubro in rubroSelect.SubRubros" ng-model="subRubroSelect"></select>
-
-                                            </div> <!--SubRubro-->
-                                            <div class="col-md-3">
-                                                <br />
-                                                <button class="btn btn-default btn-primary" ng-click="AddRubro()">
-                                                    Agregar Rubro
-                                                </button>
-
-                                            </div> <!--Boton Agregar Rubro/SubRubro-->
-
-                                        </div> <!--Rubro/SubRubro/Boton agregar a lista-->
+                                            <div class="col-xs-4">
+                                                <label>Dni</label>
+                                                <input type="text" ng-model="infoEmpleado.Dni" class="form-control" required />
+                                            </div><!--DNI-->
+                                            <div class="col-xs-8">
+                                                <label>Cuil</label>
+                                                <input type="text" ng-model="infoEmpleado.Cuil" class="form-control" required />
+                                            </div> <!--CUIL-->
+                                        </div> <!--DNI/CUIL-->
+                                        <br />
+                                        <div class="row">
+                                            <div class="col-xs-8">
+                                                <label>Nombre y Apellido</label>
+                                                <input type="text" ng-model="infoEmpleado.NombreApellido" class="form-control" />
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label>Fecha de Nacimiento</label>
+                                                <input class="form-control" type="date" ng-model="infoEmpleado.FecNacimiento">
+                                            </div>
+                                        </div> <!--Nombre y Apellido/Fecha de Nacimiento-->
                                         <br />
 
+                                        <div class="row">
+                                            <h3>Aqui va el Location</h3>
 
-                                        <table class="table table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>#</th>
-                                                    <th>Rubro</th>
-                                                    <th>Subrubro</th>
-                                                    <th>Opciones</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody ng-repeat="i in rubrosList">
-                                                <tr>
-                                                    <!--Verificar porque no se muestra el contenido-->
-                                                    <th>{{$index + 1}}</th>
-                                                    <td>{{i.rNombre}}</td>
-                                                    <td>{{i.srNombre}}</td>
-                                                    <td><a class="btn" ng-click="RubroDel(i)">Delete</a></td>
-                                                </tr>
-                                            </tbody>
-                                            <tfoot>
-                                                <tr></tr>
-                                            </tfoot>
-                                        </table><!--Lista de Rubros/Subrubro-->
-
+                                        </div> <!--Ubicacion Actual/Origen-->
                                     </div>
-                                  
+
+                                </div><!--Datos personales-->
+
+                                
+                                <br />
+
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">Datos de contacto</div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-xs-5">
+                                                <label>Telefono</label>
+                                                <input type="text" ng-model="infoEmpleado.Telefono" class="form-control" required />
+                                            </div> <!--Tel-->
+                                            <div class="col-xs-7">
+                                                <label>Celular</label>
+                                                <input type="text" ng-model="infoEmpleado.Celular" class="form-control" />
+                                            </div>
+                                        </div><!--Tel/Cel-->
+                                        <br />
+
+                                        <div class="row">
+                                            <div class="col-xs-12">
+                                                <label>Correo electronico</label>
+                                                <input type="email" ng-model="infoEmpleado.Email" class="form-control" required />
+                                            </div>
+                                        </div> <!--EMail-->
+                                        <br />
+                                    </div>
+                                </div><!--Panel datos de contacto-->
+                                <br />
+                                
+
+
+                                </div> <!--Datos empleado-->
+                            </div> <!--Datos Basicos Empleado-->
+
+                        </div> <!--Panel superior(imagen/datos basicos/datos de contacto)-->
+                    </div>
+                
+                    <div class="row">
+                        <div class="col-xs-10 col-xs-offset-1">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">Resumen Curricular (500 caracteres)</div>
+                                <div class="panel-body">
+                                    <textarea cols="25" rows="6" class="form-control" required ng-model="infoEmpleado.ResumenCurricular"></textarea>
                                 </div>
                             </div>
-                            
+                        </div><!--Carga de resumen curricular-->
 
-                        </div><!--Listado de Rubro/SubRubro-->
+                        <br />
 
-                    </div> <!--Panel inferior(Resumen Curricular/Rubros/Subrubros)-->
+                        <div class=" col-xs-10 col-xs-offset-1">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">Rubros a los que pertenece</div>
+                                <div class="panel-body">
+                                    <div class="row">
+
+                                        <div class="col-md-4 form-inline">
+                                            <label>Rubro</label>
+                                            <select class="btn btn-block btn-primary" ng-options="rubro.Nombre for rubro in rubros" ng-model="rubroSelect"></select>
+
+                                        </div><!--Rubro-->
+                                        <div class="col-md-4">
+                                            <label>Sub-Rubro</label>
+                                            <select class="btn btn-block btn-primary" ng-options="subRubro.Nombre for subRubro in rubroSelect.SubRubros" ng-model="subRubroSelect"></select>
+
+                                        </div> <!--SubRubro-->
+                                        <div class="col-md-3">
+                                            <br />
+                                            <button class="btn btn-default btn-primary" ng-click="AddRubro()">
+                                                Agregar Rubro
+                                            </button>
+
+                                        </div> <!--Boton Agregar Rubro/SubRubro-->
+
+                                    </div> <!--Rubro/SubRubro/Boton agregar a lista-->
+                                    <br />
 
 
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Rubro</th>
+                                                <th>Subrubro</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-repeat="i in rubrosList">
+                                            <tr>
+                                                <!--Verificar porque no se muestra el contenido-->
+                                                <th>{{$index + 1}}</th>
+                                                <td>{{i.rNombre}}</td>
+                                                <td>{{i.srNombre}}</td>
+                                                <td><a class="btn" ng-click="RubroDel(i)">Delete</a></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr></tr>
+                                        </tfoot>
+                                    </table><!--Lista de Rubros/Subrubro-->
 
+                                </div>
 
-                </div>
-            </div> <!--Cuerpo de Vista-->
-            <div class="modal-footer">
-                <div class="row col-xs-offset-7">
-                    <div class="col-xs-6">
-                        <div class="form-group">
-                            <a href="#">Terminos y Condiciones</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <button type="button" class="btn btn-primary" ng-model="singleModel" ng-click="empleadoAdd(infoEmpleado)">
-                            Aceptar y Agregar Nuevo
-                        </button>
+
+
+                    </div><!--Listado de Rubro/SubRubro-->
+
+                </div> <!--Panel inferior(Resumen Curricular/Rubros/Subrubros)-->
+
+
+
+
+            </div>
+        </div> <!--Cuerpo de Vista-->
+        <div class="modal-footer">
+            <div class="row col-xs-offset-7">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <a href="#">Terminos y Condiciones</a>
                     </div>
                 </div>
-            </div> <!--Footer-->
-        </div>
+                <div class="col-xs-4">
+                    <button type="button" class="btn btn-primary" ng-model="singleModel" ng-click="empleadoAdd(infoEmpleado)">
+                        Aceptar y Agregar Nuevo
+                    </button>
+                </div>
+            </div>
+        </div> <!--Footer-->
     </div>
+</div>
 </div>
 <!-- END - Area de Carga de Empleado-->
