@@ -4162,6 +4162,7 @@
     <Content Include="Scripts\loading-bar.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\ng-google-chart\ng-google-chart.js" />
+    <Content Include="Scripts\ngAutocomplete\ngAutocomplete.js" />
     <Content Include="Scripts\ngFlow\ng-flow-standalone.js" />
     <Content Include="Scripts\ngFlow\ng-flow-standalone.min.js" />
     <Content Include="Scripts\ngFlow\ng-flow.js" />

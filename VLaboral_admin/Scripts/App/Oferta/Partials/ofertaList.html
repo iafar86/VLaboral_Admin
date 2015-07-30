@@ -46,19 +46,59 @@
             <br />
             <div class="row">
                 <div class="col-xs-12">
-                    <accordion>
-                        <accordion-group is-open="true">
-                            <accordion-heading>
-                                Resultado de Ofertas
-                            </accordion-heading >
-                            <div class="row text-center text-info">
-                                No se encontraron coincidencias
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Resultado de la busqueda</div>
+                        <div class="panel-body">
+                            <div ng-repeat="Oferta in Ofertas">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">{{Oferta.Nombre}}</div>
+                                    <div class="panel-body">
+                                        <div class="panel-body form-inline">
+                                            <div class="col-xs-3">
+                                                <img src="../../../../Imagenes/10734009_836571383032581_1746110247923660756_n.png" class="img-responsive img-rounded" style="width:80%;heigth:80%">
+
+                                            </div>
+                                            <div class="col-xs-6 form-inline">
+                                                <div class="row">
+
+                                                    <div class="col-xs-6 form-inline">
+
+                                                        <label>Rubro: {{Oferta.Rubro}}</label>
+
+                                                    </div>
+
+
+                                                    <div class="col-xs-6 form-inline">
+                                                        <label>Fecha: {{Oferta.FechaDeInicio}}</label>
+
+                                                    </div>
+                                                </div>
+                                                <br>
+
+
+                                                <div class="row">
+                                                    <div class="col-xs-12 form-group">
+                                                        <label>Descripcion: {{Oferta.Descripcion}}</label>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                            
 
 
-                        </accordion-group>
-                    </accordion>
+                        </div>
+
+
+                    </div>
+                    <!--<div class="row text-center text-info">
+                No se encontraron coincidencias
+            </div-->
+
                 </div>
 
 
