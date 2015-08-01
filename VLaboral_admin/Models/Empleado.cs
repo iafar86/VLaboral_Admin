@@ -31,8 +31,10 @@ namespace VLaboral_admin.Models
         //public virtual UbicacionOrigen UbicacionOrigen { get; set; }
 
         //Quique: Relacion Muchos a Muchos con Puesto
-        public virtual ICollection<Puesto> puestos { get; set; }
+        public virtual ICollection<Puesto> Puestos { get; set; }
 
+        //iafar: relacion muchos a muchos con subrubro
+        public virtual ICollection<SubRubro> SubRubros { get; set; }
 
     }
 
@@ -42,11 +44,6 @@ namespace VLaboral_admin.Models
         public int Id { get; set; }
         public String Habilidades { get; set; }
         public String Descripcion { get; set; }
-
-        //iafar: relacion muchos a muchos con rubro
-        public virtual ICollection<SubRubro> SubRubros { get; set; }
-
-
 
     }
 
