@@ -1,4 +1,4 @@
-﻿vLaboralApp.controller('empleadoCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams, empleadoDataFactory, rubroDataFactory
+﻿vLaboralApp.controller('empleadoCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams, empleadoDataFactory, rubroDataFactory, puestoDataFactory
     , listadoEmpleados, infoEmpleado, listadoRubros, listadoPuestos) {
     
     //#region Rubro/SubRubro
@@ -141,6 +141,23 @@
 
     //#Region Puestos
     $scope.puestos = listadoPuestos;
+    $scope.puestoSelect = [];
+    $scope.puestoList = [];
+
+    $scope.puestoAdd = function () {
+        puestoTemp = {
+            pId: $scope.puestoSelect.Id,
+            pNombre: $scope.puestoSelect.Nombre,
+        };
+        $scope.puestoList.push(puestoTemp);
+
+
+    };
+
+    $scope.puestoDel = function (item) {
+        var index = $scope.puestoList.indexOf(item);
+        $scope.puestoList.splice(index, 1);
+    };
 
 
 });

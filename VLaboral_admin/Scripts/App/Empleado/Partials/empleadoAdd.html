@@ -208,11 +208,40 @@
                         <label>Puesto a ocupar</label>    
                         </div>
                         <div class="panel-body">
-                            <label>
-                                Puesto:
-                            </label>
-                                <select class="btn btn-primary" ng-options="puesto.Nombre for puesto in puestos" ng-model="puestoSeleccionado"></select>                           
-                            <div>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <label>
+                                        Puesto:
+                                    </label>
+                                    <input type="text" ng-model="puestoSelect.Nombre" class="form-control" placeholder="Puesto en el que se desemp..." />
+                                    <!--<select class="btn btn-primary" ng-options="puesto.Nombre for puesto in puestos" ng-model="puestoSelect"></select>-->
+                                </div>
+                                <div class="col-xs-4">
+                                    <button ng-click="puestoAdd()" class="btn btn-primary">Agregar puesto</button>
+                                </div>
+                            </div>
+
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Puesto</th>
+                                    </tr>
+                                </thead>
+                                <tbody ng-repeat="i in puestoList">
+                                    <tr>                                        
+                                        <th>{{$index + 1}}</th>
+                                        <td>{{i.pNombre}}</td>
+                                        <td><a class="btn" ng-click="puestoDel(i)">Delete</a></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr></tr>
+                                </tfoot>
+                            </table>
+                                                                                    
+                            <div class="row col-xs-12">
                                 <br />
                                 <div class="form-group">
                                     <label>Pertenece a un proyecto?</label>
@@ -228,12 +257,14 @@
                                 </div>
                                 
                             </div>
-                            <div>
+                            <div class="col-xs-12">
                                 <div class="user-wrapper" ng-show="content == '1'">
-                                    <label>
-                                        Nombre del proyecto
-                                        <input type="text" class="form-control" />
-                                    </label>
+                                    <div class="row">
+                                        <label>
+                                            Nombre del proyecto
+                                            <input type="text" class="form-control" />
+                                        </label>
+                                    </div>
                                 </div>
 
                             </div>
