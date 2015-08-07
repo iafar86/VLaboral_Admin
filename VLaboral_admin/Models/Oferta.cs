@@ -14,6 +14,7 @@ namespace VLaboral_admin.Models
         public DateTime FechaFinConvocatoria { get; set; }
         public Boolean Publico { get; set; }
         public string Descripcion { get; set; }
+        public string Estado { get; set; }
 
         //Quique: Relacion Uno a Muchos con Empleador
         public int EmpleadorId { get; set; }
@@ -21,7 +22,5 @@ namespace VLaboral_admin.Models
 
         //iafar: Relacion uno a muchos con Puestos(muchos)
         public virtual ICollection<Puesto> Puestos { get; set; }
-
-        
     }
 }
