@@ -18,20 +18,17 @@
             <br />
             <div class="row">
                 <div class="col-xs-8">
-                    <div class="col-xs-3">
-                        <div class="btn-group" dropdown is-open="status.isopen">
-                            <button type="button" class="btn btn-primary dropdown-toggle" dropdown-toggle>
-                                Buscar Por <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Nombre</a></li>
-                                <li><a href="#">Puesto</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#">Otros</a></li>
-                            </ul>
-                        </div> <!--Boton buscar por-->
+                    <div class="col-xs-4">
+                    <div class="form-inline">
+                        <label>Buscar por: </label>
+                        <select class="btn btn-block btn-primary">
+                            <option>Nombre</option>
+                            <option>Puesto</option>
+                            <option></option>
+                        </select>
+                    </div>
                     </div><!--Buscar por-->
-                    <div class="col-xs-9">
+                    <div class="col-xs-6">
                         <input type="text" ng-model="" class="form-control" placeholder="Ingrese lo que quiere buscar" required />
                     </div><!--Cadena de busqueda-->
                 </div><!--Nombre de oferta-->

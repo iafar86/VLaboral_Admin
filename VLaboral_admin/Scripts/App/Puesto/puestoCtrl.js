@@ -1,0 +1,1 @@
+﻿vLaboralApp.controller('puestoCtrl', function ($scope, $stateParams, $state, $filter, ngTableParams) {});

@@ -130,6 +130,7 @@ var vLaboralApp = angular.module('vLaboralApp', ['ngRoute', 'ngResource', 'ui.ro
                       resolve: {
                           empleadoDataFactory: 'empleadoDataFactory',
                           rubroDataFactory: 'rubroDataFactory',
+                          puestoDataFactory: 'puestoDataFactory',
                           infoEmpleado: function () {
                               return { value: [] };
                           },
@@ -138,8 +139,10 @@ var vLaboralApp = angular.module('vLaboralApp', ['ngRoute', 'ngResource', 'ui.ro
                           },
                           listadoRubros: function (rubroDataFactory) {
                               return rubroDataFactory.query();
+                          },
+                          listadoPuestos: function (puestoDataFactory){
+                              return puestoDataFactory.query();
                           }
-
                       }
                   }
               }

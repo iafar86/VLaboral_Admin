@@ -3287,6 +3287,8 @@
     <Content Include="Scripts\App\Oferta\ofertaDataFactory.js" />
     <Content Include="Scripts\App\Oferta\Partials\ofertaAdd.html" />
     <Content Include="Scripts\App\Oferta\Partials\ofertaList.html" />
+    <Content Include="Scripts\App\Puesto\puestoCtrl.js" />
+    <Content Include="Scripts\App\Puesto\puestoDataFactory.js" />
     <Content Include="Scripts\App\Rubro\rubroCtrl.js" />
     <Content Include="Scripts\App\Rubro\rubroDataFactory.js" />
     <Content Include="Scripts\App\vLaboralApp.js" />
@@ -4194,6 +4196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\App\Puesto\Partials\" />
     <Folder Include="Scripts\App\Rubro\Partials\" />
   </ItemGroup>
   <ItemGroup>
